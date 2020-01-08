@@ -56,4 +56,9 @@ Cinema.prototype.totalRuntime = function () {
   return total;
 };
 
+Cinema.prototype.findFilmsByProperty = function(searchProperty, searchTerm){
+   const result = this.films.filter(film => film[searchProperty] === searchTerm);
+   return result;
+};
+
 module.exports = Cinema;
