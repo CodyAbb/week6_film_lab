@@ -57,6 +57,10 @@ describe('Cinema', function () {
     const actual = [moonlight, bladeRunner, blackPanther, trainspotting];
     assert.deepStrictEqual(actual, cinema.checkFilmLength(100));
   });
-  it('should be able to calculate total running time of all films');
+
+  it('should be able to calculate total running time of all films', function(){
+    const actual = 622;
+    assert.deepEqual(actual, cinema.totalRuntime());
+  });
 
 });

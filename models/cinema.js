@@ -48,4 +48,12 @@ Cinema.prototype.checkFilmLength = function (searchLength) {
   return filmLengths;
 };
 
+Cinema.prototype.totalRuntime = function () {
+  const filmLengths = this.films.map(film => film.length);
+  const total = filmLengths.reduce((accumulator, currentValue)=> {
+    return accumulator += currentValue
+  }, 0);
+  return total;
+};
+
 module.exports = Cinema;
